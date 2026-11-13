@@ -1,0 +1,1237 @@
+---
+import Layout from "../../layout/Layout.astro";
+
+const seo = {
+  title: "About AM2PM Consulting | Engineering & Transformation",
+  description:
+    "Learn how AM2PM Consulting supports organisations through engineering, maintenance, project delivery, B-BBEE and organisational transformation.",
+  canonical: "https://www.am2pm.co.za/about/",
+};
+
+const engineeringServices = [
+  "Engineering management and technical services",
+  "Maintenance, facilities and asset care",
+  "Project management and delivery",
+  "Automation and process optimisation",
+  "Electrical and energy solutions",
+  "Safety, health, environment and quality (SHEQ)",
+];
+
+const transformationServices = [
+  "B-BBEE assessment, strategy and scorecard improvement",
+  "Ownership and management control",
+  "Employment equity",
+  "Skills development and learning programmes",
+  "Enterprise and supplier development",
+  "Socio-economic development",
+  "Verification readiness, governance and reporting",
+  "Organisational change management",
+];
+
+const industries = [
+  "Manufacturing and industrial operations",
+  "Packaging and production",
+  "Retail and wholesale",
+  "E-commerce, logistics and distribution",
+  "Chemicals and process industries",
+  "Agriculture and agri-business",
+  "Telecommunications",
+  "Technology",
+  "Security services",
+  "Public and institutional environments",
+];
+
+const organisations = [
+  "South African Mint",
+  "Takealot",
+  "Mondi Packaging",
+  "Massmart",
+  "Huawei Technologies",
+  "HyChem",
+  "AMG Hanzel",
+  "Sinclairs / Agrigow",
+];
+
+const deliveryStages = [
+  {
+    title: "Understand",
+    description: "We establish the requirement, operating context, constraints and outcome the organisation needs.",
+    icon: "M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14ZM16 16l4 4M8 11h6M11 8v6",
+  },
+  {
+    title: "Define",
+    description: "We clarify the scope, responsibilities, priorities, resources and measures for the work.",
+    icon: "M8 4h8M9 3h6v3H9zM6 5H4v16h16V5h-2M8 11h8M8 15h8M8 18h5",
+  },
+  {
+    title: "Deliver",
+    description: "We plan, coordinate and support implementation, keeping the work connected to the agreed requirement.",
+    icon: "M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4L14 13l-3-3z",
+  },
+  {
+    title: "Embed",
+    description: "We complete the agreed outputs, documentation and handover, and help strengthen the processes put in place.",
+    icon: "M7 3h7l5 5v13H7zM14 3v6h5M10 15l2 2 4-4",
+  },
+];
+---
+
+<Layout seo={seo}>
+  <main class="about-page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-aos="fade-right">
+          <h1>
+            Engineering and transformation
+            <span>delivered with experience.</span>
+          </h1>
+          <p class="hero-lead">
+            AM2PM Consulting provides engineering, maintenance, project and
+            transformation services to organisations that need experienced
+            capability, structured execution and dependable delivery.
+          </p>
+          <p class="hero-note">
+            We deliver through two specialist practices, independently or
+            together where a requirement calls for both.
+          </p>
+          <div class="hero-actions">
+            <a href="/contact/" class="button button-light">
+              Talk to AM2PM <span aria-hidden="true">›</span>
+            </a>
+            <a href="/engineering/" class="button-link hero-link">
+              Explore our services <span aria-hidden="true">›</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media" data-aos="fade-left">
+          <div class="hero-image">
+            <img
+              src="https://images.pexels.com/photos/3862375/pexels-photo-3862375.jpeg?auto=compress&cs=tinysrgb&w=1800"
+              alt="Engineering professionals working in an industrial environment"
+            />
+            <div class="hero-image-caption">
+              <strong>Two specialist practices.</strong>
+              <span>One clear focus: getting important work done.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-section">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>Level 1</strong>
+          <span>B-BBEE contributor</span>
+        </div>
+        <div class="trust-item">
+          <strong>36 years</strong>
+          <span>Combined leadership experience</span>
+        </div>
+        <div class="trust-item">
+          <strong>2 practices</strong>
+          <span>Engineering and Transformation</span>
+        </div>
+        <div class="trust-item">
+          <strong>South Africa</strong>
+          <span>Experience across diverse industries</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro section-space">
+      <div class="container intro-grid">
+        <div class="intro-title" data-aos="fade-up">
+          <h2>
+            We take on the technical and organisational work that moves
+            businesses forward.
+          </h2>
+        </div>
+        <div class="intro-content" data-aos="fade-up">
+          <p class="large">
+            Organisations often need more than recommendations. They need
+            experienced people who can understand the operating environment,
+            define what needs to happen and support the work through
+            implementation.
+          </p>
+          <p>
+            AM2PM provides that support across engineering, maintenance,
+            facilities, projects, operational performance, SHEQ, B-BBEE and
+            organisational transformation.
+          </p>
+          <p>
+            We work with businesses to improve operational reliability, deliver
+            technical initiatives, strengthen management systems, develop
+            people and progress transformation objectives. Each engagement is
+            shaped around the organisation’s requirements, priorities and
+            desired outcomes.
+          </p>
+          <p>
+            Our practices can be engaged separately. Where a requirement spans
+            technical and people-related disciplines, we coordinate the
+            relevant capabilities around one agreed scope.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section-space section-light">
+      <div class="container">
+        <div class="section-heading" data-aos="fade-up">
+          <div>
+            <h2>
+              Two specialist practices.
+              <span>Clear capability. Direct delivery.</span>
+            </h2>
+          </div>
+          <p>
+            We structure our services around the work that needs to be done,
+            with practical involvement from assessment and planning through
+            implementation and handover where required.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card" data-aos="fade-up">
+            <div class="service-content">
+              <h3>Engineering, maintenance and technical services.</h3>
+              <p>
+                We support organisations with engineering management,
+                maintenance, facilities, projects, technical improvement and
+                SHEQ requirements. Our work is focused on reliable assets,
+                effective operations and the successful delivery of technical
+                initiatives.
+              </p>
+              <div class="service-tags">
+                {engineeringServices.map((service) => <span>{service}</span>)}
+              </div>
+              <a href="/engineering/" class="text-link service-action">
+                Explore Engineering <span aria-hidden="true">›</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card" data-aos="fade-up">
+            <div class="service-content">
+              <h3>B-BBEE, people and organisational transformation.</h3>
+              <p>
+                We help organisations plan and implement transformation
+                priorities, strengthen internal processes and coordinate the
+                activities and evidence needed to support sustained progress.
+              </p>
+              <div class="service-tags">
+                {transformationServices.map((service) => <span>{service}</span>)}
+              </div>
+              <a href="/transformation/" class="text-link service-action">
+                Explore Transformation <span aria-hidden="true">›</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="industries section-space">
+      <div class="container industries-grid">
+        <div class="industries-copy" data-aos="fade-right">
+          <h2>
+            Experience across different industries
+            <span>and operating environments.</span>
+          </h2>
+          <p>
+            Our experience spans asset-intensive, service-led and complex
+            operating environments. We adapt our support to the organisation’s
+            sector, operating model, regulatory context and business
+            priorities.
+          </p>
+          <p>
+            This cross-industry perspective helps us understand how technical,
+            operational, workforce and transformation requirements affect the
+            wider business.
+          </p>
+        </div>
+        <div class="industry-list" data-aos="fade-left">
+          {industries.map((industry) => (
+            <div class="industry-item">
+              <span>{industry}</span>
+              <span class="industry-arrow" aria-hidden="true">›</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience section-space section-dark">
+      <div class="container">
+        <div class="experience-grid">
+          <div class="experience-copy" data-aos="fade-right">
+            <h2>Experience that connects decisions to the realities of delivery.</h2>
+            <p>
+              AM2PM brings together 36 years of combined leadership experience
+              across engineering, operations, maintenance, facilities,
+              projects, learning and development, B-BBEE and organisational
+              transformation.
+            </p>
+            <p>
+              This includes 19 years of engineering and operational experience
+              and 17 years in learning, development and transformation. That
+              experience has been built in environments where technical
+              decisions affect production, maintenance affects reliability,
+              projects affect people and transformation affects how
+              organisations operate.
+            </p>
+            <div class="impact-result">
+              <strong>800 kVA</strong>
+              <span>
+                maximum-demand reduction achieved through an energy improvement
+                initiative.
+              </span>
+            </div>
+          </div>
+
+          <div class="experience-panel" data-aos="fade-left">
+            <h3>Professional and project experience includes</h3>
+            <p>
+              Our principals have contributed to projects and professional
+              work involving organisations such as:
+            </p>
+            <div class="organisation-list">
+              {organisations.map((organisation) => <span>{organisation}</span>)}
+            </div>
+            <p class="experience-note">
+              These names reflect the professional and project experience of
+              our leadership. They are not presented as a list of current AM2PM
+              clients or endorsements.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-metrics" data-aos="fade-up">
+          <div>
+            <strong data-count="19" data-suffix="+">0</strong>
+            <span>Years in engineering and operations</span>
+          </div>
+          <div>
+            <strong data-count="17" data-suffix="+">0</strong>
+            <span>Years in learning and transformation</span>
+          </div>
+          <div>
+            <strong data-count="36" data-suffix="">0</strong>
+            <span>Combined years of leadership experience</span>
+          </div>
+          <div>
+            <strong class="metric-static">Level 1</strong>
+            <span>B-BBEE contributor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="leadership section-space">
+      <div class="container">
+        <div class="section-heading" data-aos="fade-up">
+          <div>
+            <h2>Specialist leadership behind the work.</h2>
+          </div>
+          <p>
+            Our practices are led by specialists with complementary experience
+            across technical delivery, operations, people development and
+            transformation.
+          </p>
+        </div>
+
+        <div class="leadership-grid">
+          <article class="leader-card" data-aos="fade-up">
+            <h3>Pragasen Mariemuthu</h3>
+            <p class="leader-role">Engineering and Technical Services</p>
+            <p class="leader-summary">
+              Engineering and technical specialist with 19 years of experience
+              across operations, engineering, maintenance, facilities, projects
+              and SHEQ.
+            </p>
+            <ul>
+              <li>BSc Electrical Engineering, University of KwaZulu-Natal</li>
+              <li>
+                Postgraduate qualification in Maintenance Management, with
+                distinction, University of Pretoria
+              </li>
+              <li>
+                Experience in automation, OEE, energy optimisation and ISO
+                management systems
+              </li>
+            </ul>
+          </article>
+
+          <article class="leader-card" data-aos="fade-up">
+            <h3>Anusha Mariemuthu</h3>
+            <p class="leader-role">B-BBEE and Transformation</p>
+            <p class="leader-summary">
+              Transformation specialist with 17 years of experience in learning
+              and development, B-BBEE and organisational transformation.
+            </p>
+            <ul>
+              <li>BCom Honours, Cum Laude, University of KwaZulu-Natal</li>
+              <li>
+                Former Group Head of Diversity &amp; Transformations at Tyco ADT
+                South Africa
+              </li>
+              <li>Five years’ general management experience in telecommunications</li>
+              <li>
+                Skills Development Facilitator, Employment Equity Leader and
+                Prosci/ADKAR trained
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY -->
+    <section class="delivery section-space section-light">
+      <div class="container">
+        <div class="delivery-intro" data-aos="fade-up">
+          <h2>From understanding the requirement to completing the work.</h2>
+          <p>
+            Our approach is structured around the outcome. We define the work
+            before implementation, coordinate the capability required and keep
+            delivery connected to the organisation’s operating realities.
+          </p>
+        </div>
+        <div class="delivery-grid">
+          {deliveryStages.map((stage) => (
+            <article class="delivery-card" data-aos="fade-up">
+              <div class="delivery-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d={stage.icon} />
+                </svg>
+              </div>
+              <h3>{stage.title}</h3>
+              <p>{stage.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container final-cta-inner" data-aos="fade-up">
+        <div>
+          <h2>
+            Have an engineering or transformation requirement?
+            <span>Let’s talk.</span>
+          </h2>
+          <p>
+            Tell us what needs to be addressed, where the organisation is now
+            and what outcome needs to be achieved. We’ll connect you with the
+            relevant practice and establish the appropriate scope.
+          </p>
+        </div>
+        <a href="/contact/" class="button button-light">
+          Contact AM2PM <span aria-hidden="true">›</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    import AOS from "aos";
+    import "aos/dist/aos.css";
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Subtle count-up on entry for the experience figures.
+    const numberItems = document.querySelectorAll<HTMLElement>("[data-count]");
+    const setNumber = (element: HTMLElement) => {
+      const target = Number(element.dataset.count || 0);
+      const suffix = element.dataset.suffix || "";
+      const start = performance.now();
+      const duration = 900;
+      const tick = (now: number) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        element.textContent = `${Math.floor(target * eased)}${suffix}`;
+        if (progress < 1) window.requestAnimationFrame(tick);
+        else element.textContent = `${target}${suffix}`;
+      };
+      window.requestAnimationFrame(tick);
+    };
+
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      numberItems.forEach((element) => {
+        element.textContent = `${element.dataset.count || "0"}${element.dataset.suffix || ""}`;
+      });
+    } else {
+      const numberObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            if (entry.target instanceof HTMLElement) setNumber(entry.target);
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.5 }
+      );
+      numberItems.forEach((element) => numberObserver.observe(element));
+    }
+
+    AOS.init({
+      duration: 650,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 70,
+      disable: reduceMotion,
+    });
+  </script>
+</Layout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700;800;900&display=swap");
+
+  :global(html) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #fff;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  :global(*) { box-sizing: border-box; }
+  :global(a) { color: inherit; text-decoration: none; }
+  :global(img) { max-width: 100%; }
+  :global(button), :global(input), :global(textarea), :global(select) { font: inherit; }
+
+  .about-page {
+    --ink: #303238;
+    --ink-soft: #404248;
+    --blue: #4091bf;
+    --blue-light: #eaf4f9;
+    --surface: #f4f5f6;
+    --muted: #69717d;
+    --line: #dfe2e6;
+    color: var(--muted);
+    background: #fff;
+    font-family: "Open Sans", Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .about-page a:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+    border-radius: 0.5rem;
+  }
+
+  .container {
+    width: min(1200px, calc(100% - 64px));
+    margin-inline: auto;
+  }
+
+  .section-space { padding-block: clamp(4.5rem, 8vw, 7.2rem); }
+  .section-light { background: var(--surface); }
+  .section-dark { background: var(--ink); color: #fff; }
+
+  /* Headings */
+  .about-page h1,
+  .about-page h2,
+  .about-page h3 {
+    margin-top: 0;
+    color: var(--ink-soft);
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.015em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .about-page h2 {
+    margin-bottom: 0;
+    font-size: clamp(1.8rem, 3.1vw, 2.65rem);
+    letter-spacing: -0.025em;
+  }
+
+  .about-page h2 span {
+    display: block;
+    margin-top: 8px;
+    color: var(--blue);
+  }
+
+  .about-page p { line-height: 1.8; }
+
+  /* Buttons and links */
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    min-height: 52px;
+    padding: 0 1.55rem;
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
+    font-family: "Source Sans 3", "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    box-shadow: 0 8px 20px rgba(48, 50, 56, 0.1);
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  }
+
+  .button:hover { transform: translateY(-2px); background: var(--blue); }
+  .button-light { background: #fff; color: var(--ink); }
+  .button-light:hover { background: #dcecf4; color: var(--ink); }
+
+  .button-link,
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--blue);
+    font-family: "Source Sans 3", "Open Sans", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: gap 0.25s ease, color 0.25s ease;
+  }
+
+  .button-link:hover,
+  .text-link:hover { gap: 0.9rem; color: #245d7f; }
+
+  .button span,
+  .button-link span,
+  .text-link span {
+    display: inline-grid;
+    width: 1.65rem;
+    height: 1.65rem;
+    place-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 1.15rem;
+    line-height: 1;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .button:hover span,
+  .button-link:hover span,
+  .text-link:hover span,
+  .service-card:hover .service-action span {
+    transform: translateX(3px);
+    background: rgba(64, 145, 191, 0.12);
+  }
+
+  /* HERO: dark split, as on the homepage */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink);
+    color: #fff;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 48% 0 0;
+    background: linear-gradient(120deg, rgba(64, 145, 191, 0.18), transparent 72%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.03fr) minmax(0, 0.97fr);
+    align-items: center;
+    gap: clamp(2.8rem, 6vw, 6.25rem);
+    min-height: 690px;
+    padding-block: clamp(5rem, 9vw, 7.5rem);
+  }
+
+  .hero-copy { max-width: 650px; }
+
+  .about-page .hero h1 {
+    margin: 0 0 1.75rem;
+    color: #fff;
+    font-size: clamp(2.65rem, 5.2vw, 4.65rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  .about-page .hero h1 span { display: block; color: #69b7df; }
+
+  .hero-lead {
+    max-width: 610px;
+    margin: 0;
+    color: #e1e4e8;
+    font-size: 1.08rem;
+    line-height: 1.9;
+  }
+
+  .hero-note {
+    max-width: 570px;
+    margin: 18px 0 0;
+    color: #aeb7c1;
+    font-size: 0.9rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    margin-top: 35px;
+  }
+
+  .hero .hero-link { color: #fff; }
+  .hero .hero-link:hover { color: #69b7df; }
+
+  .hero-media { min-width: 0; }
+
+  .hero-image {
+    position: relative;
+    height: min(620px, 68vh);
+    min-height: 420px;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #454951;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.22);
+  }
+
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(48, 50, 56, 0) 55%, rgba(48, 50, 56, 0.7) 100%);
+    pointer-events: none;
+  }
+
+  .hero-image-caption {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.4rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-image-caption strong {
+    color: #fff;
+    font-family: "Source Sans 3", "Open Sans", sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 800;
+  }
+
+  .hero-image-caption span { color: #e8edf1; font-size: 0.85rem; line-height: 1.5; }
+
+  /* TRUST STRIP */
+  .trust-section { border-bottom: 1px solid var(--line); background: #fff; }
+  .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    min-height: 128px;
+    padding: 24px 30px;
+    border-right: 1px solid var(--line);
+  }
+
+  .trust-item:first-child { padding-left: 0; }
+  .trust-item:last-child { border-right: 0; }
+
+  .trust-item strong {
+    color: var(--blue);
+    font-family: "Source Sans 3", "Open Sans", sans-serif;
+    font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  .trust-item span { color: var(--muted); font-size: 0.78rem; line-height: 1.5; font-weight: 600; }
+
+  /* INTRO */
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 10%;
+    align-items: start;
+  }
+
+  .intro-title h2 { max-width: 520px; }
+  .intro-content { max-width: 650px; }
+  .intro-content p { margin: 0 0 1.2rem; color: var(--muted); font-size: 1rem; }
+  .intro-content p.large { color: var(--ink); font-size: 1.16rem; font-weight: 600; }
+
+  /* Section headings */
+  .section-heading {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 10%;
+    align-items: end;
+    margin-bottom: 55px;
+  }
+
+  .section-heading h2 { max-width: 560px; }
+  .section-heading > p { max-width: 620px; margin: 0; color: var(--muted); }
+
+  /* SERVICES */
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .service-card {
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e3e5e8;
+    border-radius: 1.2rem;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(30, 35, 42, 0.045);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 50px rgba(28, 34, 42, 0.1);
+  }
+
+  .service-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(1.6rem, 3vw, 2.6rem);
+  }
+
+  .service-content h3 {
+    margin: 0 0 16px;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
+    line-height: 1.25;
+  }
+
+  .service-content > p { margin: 0 0 1.4rem; color: var(--muted); font-size: 0.9rem; }
+
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 4px 0 28px;
+  }
+
+  .service-tags span {
+    padding: 5px 10px;
+    border: 1px solid #dfe2e6;
+    border-radius: 999px;
+    background: #eef1f3;
+    color: #59616b;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .service-action { margin-top: auto; }
+
+  /* INDUSTRIES */
+  .industries { background: #fff; }
+
+  .industries-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 10%;
+    align-items: start;
+  }
+
+  .industries-copy h2 { max-width: 520px; }
+  .industries-copy p { margin: 24px 0 0; color: var(--muted); }
+
+  .industry-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .industry-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 66px;
+    padding: 12px 18px;
+    border: 1px solid #e3e5e8;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(30, 35, 42, 0.04);
+    color: #4a525b;
+    font-size: 0.83rem;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .industry-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(64, 145, 191, 0.55);
+    box-shadow: 0 14px 30px rgba(28, 34, 42, 0.09);
+  }
+
+  .industry-arrow {
+    display: inline-grid;
+    flex: 0 0 auto;
+    width: 1.65rem;
+    height: 1.65rem;
+    place-items: center;
+    border: 1px solid var(--blue);
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+
+  /* EXPERIENCE (dark) */
+  .experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 8%;
+    align-items: start;
+  }
+
+  .about-page .experience h2 { max-width: 560px; color: #fff; }
+  .experience-copy p { margin: 24px 0 0; color: #c2c8d0; font-size: 0.95rem; }
+
+  .impact-result {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 38px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .impact-result strong {
+    color: #8dc5e5;
+    font-family: "Source Sans 3", "Open Sans", sans-serif;
+    font-size: clamp(2.5rem, 4.5vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+  }
+
+  .impact-result span { max-width: 250px; color: #c2c8d0; font-size: 0.8rem; line-height: 1.65; }
+
+  .experience-panel {
+    padding: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .about-page .experience-panel h3 { margin: 0; color: #fff; font-size: 1.15rem; line-height: 1.35; }
+  .experience-panel > p { margin: 14px 0 24px; color: #bcc3cb; font-size: 0.85rem; }
+
+  .organisation-list { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .organisation-list span {
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #edf2f5;
+    font-size: 0.74rem;
+    font-weight: 600;
+  }
+
+  .experience-panel .experience-note { margin: 24px 0 0; color: #9aa3ad; font-size: 0.72rem; }
+
+  /* Blue numbers band, as on the homepage */
+  .experience-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 70px;
+    padding: 42px 0;
+    border-radius: 1.1rem;
+    background: var(--blue);
+  }
+
+  .experience-metrics > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 22px;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .experience-metrics > div:last-child { border-right: 0; }
+
+  .experience-metrics strong {
+    display: block;
+    color: #fff;
+    font-family: "Source Sans 3", "Open Sans", sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.3rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .experience-metrics span {
+    max-width: 210px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+  }
+
+  /* LEADERSHIP */
+  .leadership { background: #fff; }
+
+  .leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .leader-card {
+    padding: clamp(1.8rem, 3vw, 2.6rem);
+    border: 1px solid #e3e5e8;
+    border-radius: 1.2rem;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(30, 35, 42, 0.045);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .leader-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(64, 145, 191, 0.55);
+    box-shadow: 0 18px 50px rgba(28, 34, 42, 0.1);
+  }
+
+  .leader-card h3 { margin: 0; font-size: 1.4rem; line-height: 1.25; }
+
+  .leader-role {
+    margin: 8px 0 18px;
+    color: var(--blue);
+    font-family: "Source Sans 3", "Open Sans", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .leader-summary { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+  .leader-card ul {
+    display: grid;
+    gap: 10px;
+    margin: 22px 0 0;
+    padding: 22px 0 0;
+    border-top: 1px solid var(--line);
+    list-style: none;
+  }
+
+  .leader-card li {
+    position: relative;
+    padding-left: 19px;
+    color: #4a525b;
+    font-size: 0.82rem;
+    line-height: 1.65;
+  }
+
+  .leader-card li::before {
+    content: "";
+    position: absolute;
+    top: 0.6em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+  }
+
+  /* DELIVERY */
+  .delivery-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9%;
+    align-items: end;
+    margin-bottom: 55px;
+  }
+
+  .delivery-intro h2 { max-width: 560px; }
+  .delivery-intro p { max-width: 550px; margin: 0; color: var(--muted); }
+
+  .delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .delivery-card {
+    padding: 30px;
+    border: 1px solid #e3e5e8;
+    border-radius: 1.1rem;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(30, 35, 42, 0.045);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .delivery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 50px rgba(28, 34, 42, 0.1);
+  }
+
+  .delivery-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  .delivery-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .delivery-card h3 { margin: 0 0 12px; font-size: 1.1rem; }
+  .delivery-card p { margin: 0; color: var(--muted); font-size: 0.86rem; }
+
+  /* FINAL CTA */
+  .final-cta {
+    padding: 75px 0;
+    background: var(--blue);
+    color: #fff;
+  }
+
+  .final-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+  }
+
+  .about-page .final-cta h2,
+  .about-page .final-cta h2 span { color: #fff; }
+
+  .about-page .final-cta h2 {
+    max-width: 850px;
+    margin-bottom: 12px;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.08;
+  }
+
+  .final-cta p { max-width: 720px; margin: 0; color: rgba(255, 255, 255, 0.9); }
+  .final-cta .button { flex: 0 0 auto; box-shadow: 0 10px 26px rgba(25, 65, 88, 0.18); }
+
+  /* RESPONSIVE */
+  @media (max-width: 1100px) {
+    .delivery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr 0.85fr; gap: 35px; min-height: auto; }
+    .hero-image { min-height: 380px; height: 460px; }
+
+    .intro-grid,
+    .section-heading,
+    .industries-grid,
+    .experience-grid,
+    .delivery-intro { grid-template-columns: 1fr; gap: 35px; }
+
+    .experience-metrics { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
+    .experience-metrics > div:nth-child(2) { border-right: 0; }
+  }
+
+  @media (max-width: 736px) {
+    .container { width: calc(100% - 40px); }
+
+    .hero-grid { grid-template-columns: 1fr; gap: 45px; padding-block: 4.5rem; }
+    .about-page .hero h1 { font-size: clamp(2.35rem, 10vw, 3.6rem); }
+    .hero-image { min-height: 300px; height: 390px; }
+
+    .trust-grid { grid-template-columns: 1fr 1fr; }
+    .trust-item { min-height: 105px; padding: 20px 16px; border-bottom: 1px solid var(--line); }
+    .trust-item:first-child { padding-left: 16px; }
+    .trust-item:nth-child(2) { border-right: 0; }
+    .trust-item:nth-child(3),
+    .trust-item:nth-child(4) { border-bottom: 0; }
+
+    .section-heading { margin-bottom: 35px; gap: 20px; }
+    .service-grid,
+    .leadership-grid,
+    .industry-list { grid-template-columns: 1fr; gap: 20px; }
+    .industry-list { gap: 12px; }
+
+    .experience-panel { padding: 28px; }
+    .experience-metrics { margin-top: 48px; gap: 25px 15px; padding: 30px 12px; }
+    .experience-metrics > div { padding: 6px 14px; }
+    .experience-metrics strong { font-size: 2.4rem; }
+    .experience-metrics span { font-size: 0.66rem; }
+
+    .delivery-intro { margin-bottom: 35px; }
+    .final-cta-inner { align-items: flex-start; flex-direction: column; gap: 25px; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-actions { align-items: flex-start; flex-direction: column; gap: 1rem; }
+    .impact-result { align-items: flex-start; flex-direction: column; gap: 10px; }
+  }
+
+  @media (max-width: 460px) {
+    .container { width: calc(100% - 32px); }
+    .hero-image { height: 320px; }
+    .delivery-grid { grid-template-columns: 1fr; }
+    .experience-metrics strong { font-size: 2rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-page *,
+    .about-page *::before,
+    .about-page *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>

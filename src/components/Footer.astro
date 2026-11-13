@@ -1,0 +1,465 @@
+
+---
+const year = new Date().getFullYear();
+
+const engineeringLinks = [
+  {
+    label: 'Engineering & Maintenance',
+    href: '/engineering/#engineering-maintenance',
+  },
+  {
+    label: 'Project Delivery',
+    href: '/engineering/#project-delivery',
+  },
+  {
+    label: 'Automation & Process Optimisation',
+    href: '/engineering/#automation',
+  },
+  {
+    label: 'Electrical & Energy Solutions',
+    href: '/engineering/#electrical-energy',
+  },
+  {
+    label: 'Operational Performance & Asset Care',
+    href: '/engineering/#operational-performance',
+  },
+  {
+    label: 'SHEQ',
+    href: '/engineering/#sheq',
+  },
+];
+
+const transformationLinks = [
+  {
+    label: 'Assessment & Strategy',
+    href: '/transformation/#assessment-strategy',
+  },
+  {
+    label: 'Employment Equity',
+    href: '/transformation/#employment-equity',
+  },
+  {
+    label: 'Skills Development',
+    href: '/transformation/#skills-development',
+  },
+  {
+    label: 'Enterprise Development',
+    href: '/transformation/#enterprise-development',
+  },
+  {
+    label: 'Socio-Economic Development',
+    href: '/transformation/#socio-economic-development',
+  },
+  {
+    label: 'Verification Readiness',
+    href: '/transformation/#verification-readiness',
+  },
+  {
+    label: 'Governance & Reporting',
+    href: '/transformation/#governance-reporting',
+  },
+  {
+    label: 'Change Management',
+    href: '/transformation/#change-management',
+  },
+];
+
+const companyLinks = [
+  { label: 'About', href: '/about/' },
+  { label: 'How We Work', href: '/how-we-work/' },
+  { label: 'Projects', href: '/projects/' },
+  { label: 'Insights', href: '/insights/' },
+  { label: "Let's Talk", href: '/contact/' },
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-main">
+
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="AM2PM Consulting home">
+          <img src="/am2pm-logo.png" alt="">
+        </a>
+
+        <span class="footer-accent"></span>
+
+        <p class="footer-practice">
+          Engineering &amp; Transformation
+        </p>
+
+        <p class="footer-description">
+          Experienced specialists supporting organisations across
+          engineering, projects, operations and transformation.
+        </p>
+
+        <a href="/contact/" class="footer-contact-link">
+          Start a conversation
+          <span class="footer-chevron" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav class="footer-navigation" aria-label="Footer navigation">
+
+        <div class="footer-column">
+          <h2>Engineering</h2>
+          <ul>
+            {engineeringLinks.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h2>Transformation</h2>
+          <ul>
+            {transformationLinks.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h2>Company</h2>
+          <ul>
+            {companyLinks.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+      <p>
+        © {year} AM2PM Consulting. All rights reserved.
+      </p>
+
+      <div class="footer-legal">
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms &amp; Conditions</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    --footer-bg: #303238;
+    --footer-blue: #4091bf;
+    --footer-blue-hover: #69b7df;
+    --footer-white: #ffffff;
+    --footer-text: #d6dce2;
+    --footer-muted: #aab3bd;
+    --footer-faint: #87919c;
+    --footer-line: rgba(255, 255, 255, 0.13);
+
+    background: var(--footer-bg);
+    color: var(--footer-white);
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .footer-container {
+    width: min(1240px, calc(100% - 72px));
+    margin: 0 auto;
+  }
+
+  /* MAIN FOOTER */
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) 2.2fr;
+    gap: clamp(55px, 8vw, 110px);
+    padding: 68px 0 62px;
+  }
+
+  /* BRAND */
+
+  .footer-brand {
+    max-width: 330px;
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 9px;
+    color: var(--footer-white);
+    text-decoration: none;
+  }
+
+  .logo-name {
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.075em;
+  }
+
+  .logo-type {
+    color: var(--footer-muted);
+    font-size: 0.61rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+  }
+
+  .footer-accent {
+    display: block;
+    width: 42px;
+    height: 3px;
+    margin-top: 19px;
+    border-radius: 2px;
+    background: var(--footer-blue);
+  }
+
+  .footer-practice {
+    margin: 18px 0 0;
+    color: var(--footer-white);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .footer-description {
+    max-width: 310px;
+    margin: 12px 0 0;
+    color: var(--footer-muted);
+    font-size: 0.8rem;
+    line-height: 1.8;
+  }
+
+  .footer-contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 23px;
+    color: var(--footer-blue-hover);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    transition: color 180ms ease;
+  }
+
+  .footer-contact-link:hover {
+    color: var(--footer-white);
+  }
+
+  .footer-chevron {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 180ms ease;
+  }
+
+  .footer-contact-link:hover .footer-chevron {
+    transform: translateX(3px) rotate(45deg);
+  }
+
+  /* NAVIGATION */
+
+  .footer-navigation {
+    display: grid;
+    grid-template-columns: 1.15fr 1.2fr 0.7fr;
+    gap: clamp(28px, 4vw, 55px);
+  }
+
+  .footer-column h2 {
+    margin: 0 0 23px;
+    color: var(--footer-white);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .footer-column h2::after {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin-top: 12px;
+    background: var(--footer-blue);
+    content: '';
+  }
+
+  .footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-column li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-column a {
+    display: inline-block;
+    color: var(--footer-muted);
+    font-size: 0.77rem;
+    line-height: 1.65;
+    text-decoration: none;
+    transition: color 180ms ease, transform 180ms ease;
+  }
+
+  .footer-column a:hover {
+    color: var(--footer-blue-hover);
+    transform: translateX(3px);
+  }
+
+  /* BOTTOM */
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    min-height: 72px;
+    border-top: 1px solid var(--footer-line);
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    color: var(--footer-faint);
+    font-size: 0.68rem;
+    line-height: 1.6;
+  }
+
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .footer-legal a {
+    color: var(--footer-faint);
+    font-size: 0.68rem;
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+
+  .footer-legal a:hover {
+    color: var(--footer-white);
+  }
+
+  /* TABLET */
+
+  @media (max-width: 1000px) {
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .footer-brand {
+      max-width: 480px;
+    }
+
+    .footer-navigation {
+      grid-template-columns: 1fr 1fr 0.8fr;
+    }
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 700px) {
+    .footer-container {
+      width: min(calc(100% - 44px), 620px);
+    }
+
+    .footer-main {
+      gap: 42px;
+      padding: 50px 0 45px;
+    }
+
+    .footer-navigation {
+      grid-template-columns: 1fr 1fr;
+      gap: 36px 28px;
+    }
+
+    .footer-column:last-child {
+      grid-column: span 2;
+    }
+
+    .footer-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px 0 23px;
+    }
+
+    .footer-legal {
+      flex-wrap: wrap;
+      gap: 10px 22px;
+    }
+  }
+
+  /* SMALL MOBILE */
+
+  @media (max-width: 480px) {
+    .footer-container {
+      width: calc(100% - 32px);
+    }
+
+    .footer-main {
+      padding: 42px 0 38px;
+    }
+
+    .footer-navigation {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .footer-column:last-child {
+      grid-column: auto;
+    }
+
+    .footer-column h2 {
+      margin-bottom: 17px;
+    }
+
+    .footer-column ul {
+      gap: 10px;
+    }
+
+    .footer-column a {
+      font-size: 0.79rem;
+    }
+  }
+
+  /* ACCESSIBILITY */
+
+  .footer-logo:focus-visible,
+  .footer-contact-link:focus-visible,
+  .footer-column a:focus-visible,
+  .footer-legal a:focus-visible {
+    outline: 2px solid var(--footer-blue-hover);
+    outline-offset: 5px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-column a,
+    .footer-legal a,
+    .footer-contact-link,
+    .footer-chevron {
+      transition: none;
+    }
+  }
+</style>

@@ -1,0 +1,410 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface SEO {
+  title?: string;
+  description?: string;
+  robots?: string;
+  author?: string;
+  canonical?: string;
+  keywords?: string;
+
+  og?: {
+    title?: string;
+    description?: string;
+    type?: string;
+    url?: string;
+    image?: string;
+    imageAlt?: string;
+  };
+
+  twitter?: {
+    card?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+  };
+
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+interface Props {
+  seo?: SEO;
+}
+
+const { seo = {} } = Astro.props;
+
+const title =
+  seo.title ??
+  'AM2PM Consulting | Engineering, Transformation & Operational Excellence';
+
+const description =
+  seo.description ??
+  'AM2PM Consulting combines engineering, operational excellence, transformation, human capital, skills development and compliance expertise to help organisations build capability and improve performance.';
+
+const robots =
+  seo.robots ??
+  'index, follow, max-image-preview:large';
+
+const author =
+  seo.author ??
+  'AM2PM Consulting';
+
+const canonical =
+  seo.canonical ??
+  Astro.url.href;
+---
+
+<!doctype html>
+
+<html lang="en-ZA">
+
+  <head>
+
+    <!-- =====================================================
+         DOCUMENT
+         ===================================================== -->
+
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="theme-color"
+      content="#ffffff"
+    />
+
+    <title>{title}</title>
+
+
+    <!-- =====================================================
+         BASIC SEO
+         ===================================================== -->
+
+    {description && (
+      <meta
+        name="description"
+        content={description}
+      />
+    )}
+
+    {robots && (
+      <meta
+        name="robots"
+        content={robots}
+      />
+    )}
+
+    {author && (
+      <meta
+        name="author"
+        content={author}
+      />
+    )}
+
+    {seo.keywords && (
+      <meta
+        name="keywords"
+        content={seo.keywords}
+      />
+    )}
+
+    <link
+      rel="canonical"
+      href={canonical}
+    />
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+         ===================================================== -->
+
+    <meta
+      property="og:title"
+      content={seo.og?.title ?? title}
+    />
+
+    <meta
+      property="og:description"
+      content={seo.og?.description ?? description}
+    />
+
+    <meta
+      property="og:type"
+      content={seo.og?.type ?? 'website'}
+    />
+
+    <meta
+      property="og:url"
+      content={seo.og?.url ?? canonical}
+    />
+
+    {seo.og?.image && (
+      <meta
+        property="og:image"
+        content={seo.og.image}
+      />
+    )}
+
+    {seo.og?.imageAlt && (
+      <meta
+        property="og:image:alt"
+        content={seo.og.imageAlt}
+      />
+    )}
+
+
+    <!-- =====================================================
+         TWITTER / X
+         ===================================================== -->
+
+    <meta
+      name="twitter:card"
+      content={seo.twitter?.card ?? 'summary_large_image'}
+    />
+
+    <meta
+      name="twitter:title"
+      content={seo.twitter?.title ?? title}
+    />
+
+    <meta
+      name="twitter:description"
+      content={seo.twitter?.description ?? description}
+    />
+
+    {seo.twitter?.image && (
+      <meta
+        name="twitter:image"
+        content={seo.twitter.image}
+      />
+    )}
+
+
+    <!-- =====================================================
+         ARTICLE METADATA
+         ===================================================== -->
+
+    {seo.article?.publishedTime && (
+      <meta
+        property="article:published_time"
+        content={seo.article.publishedTime}
+      />
+    )}
+
+    {seo.article?.modifiedTime && (
+      <meta
+        property="article:modified_time"
+        content={seo.article.modifiedTime}
+      />
+    )}
+
+    {seo.article?.author && (
+      <meta
+        property="article:author"
+        content={seo.article.author}
+      />
+    )}
+
+
+    <!-- =====================================================
+         STRUCTURED DATA
+         ===================================================== -->
+
+    {seo.schema && (
+      <script type="application/ld+json">
+        {JSON.stringify(seo.schema)}
+      </script>
+    )}
+
+
+    <!-- =====================================================
+         FONT PRECONNECT
+         ===================================================== -->
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+
+    <!-- =====================================================
+         AM2PM TYPOGRAPHY
+         ===================================================== -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+
+    <link
+      rel="alternate icon"
+      href="/favicon.ico"
+    />
+
+  </head>
+
+
+  <body>
+
+    <Header />
+
+    <main class="site-main">
+      <slot />
+    </main>
+
+    <Footer />
+
+  </body>
+
+</html>
+
+
+<style is:global>
+
+  /* =========================================================
+     GLOBAL RESET
+     ========================================================= */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+
+    background: #ffffff;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+
+    background: #ffffff;
+    color: #111827;
+
+    font-family:
+      'Inter',
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img,
+  picture,
+  svg,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  a {
+    color: inherit;
+  }
+
+
+  /* =========================================================
+     PAGE CONTENT OFFSET
+     ========================================================= */
+
+  .site-main {
+    min-height: 60vh;
+    padding-top: 82px;
+  }
+
+
+  /* =========================================================
+     SELECTION
+     ========================================================= */
+
+  ::selection {
+    background: #1557d5;
+    color: #ffffff;
+  }
+
+
+  /* =========================================================
+     FOCUS
+     ========================================================= */
+
+  :focus-visible {
+    outline: 2px solid #1557d5;
+    outline-offset: 3px;
+  }
+
+
+  /* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+
+  /* =========================================================
+     MOBILE HEADER OFFSET
+     ========================================================= */
+
+  @media (max-width: 980px) {
+    .site-main {
+      padding-top: 74px;
+    }
+  }
+
+</style>

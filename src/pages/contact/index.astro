@@ -1,0 +1,248 @@
+---
+import Layout from "../../layout/Layout.astro";
+
+const seo = {
+  title: "Contact | AM2PM Consulting",
+  description: "Contact AM2PM Consulting to discuss your engineering, transformation or operational requirements.",
+  canonical: "https://www.am2pm.co.za/contact/",
+};
+
+const services = [
+  "Engineering & technical services",
+  "Project delivery",
+  "Maintenance & asset care",
+  "Automation & process optimisation",
+  "Electrical & energy solutions",
+  "SHEQ",
+  "Transformation",
+  "Other enquiry",
+];
+---
+
+<Layout seo={seo}>
+  <main class="contact-page">
+    <section class="contact-section">
+      <div class="container">
+        <header class="contact-heading">
+          <h1>Let's discuss <span>what you need.</span></h1>
+          <p>Tell us a little about your requirement. We'll use the details you provide to direct your enquiry to the right area of our team.</p>
+        </header>
+
+        <div class="contact-layout">
+          <form class="contact-form" id="contact-form">
+            <div class="form-grid">
+              <label>
+                <span>Your name <i>*</i></span>
+                <input type="text" name="name" autocomplete="name" placeholder="Full name" required />
+              </label>
+              <label>
+                <span>Company</span>
+                <input type="text" name="company" autocomplete="organization" placeholder="Company name" />
+              </label>
+              <label>
+                <span>Email address <i>*</i></span>
+                <input type="email" name="email" autocomplete="email" placeholder="you@company.com" required />
+              </label>
+              <label>
+                <span>Phone number</span>
+                <input type="tel" name="phone" autocomplete="tel" placeholder="Your contact number" />
+              </label>
+              <label class="full-width">
+                <span>What would you like to discuss?</span>
+                <select name="service">
+                  <option value="" selected disabled>Select a service area</option>
+                  {services.map((service) => <option value={service}>{service}</option>)}
+                </select>
+              </label>
+              <label class="full-width">
+                <span>How can we help? <i>*</i></span>
+                <textarea name="message" rows="6" placeholder="Briefly describe your project, challenge or enquiry..." required></textarea>
+              </label>
+            </div>
+            <button type="submit" class="submit-button">Send enquiry <span aria-hidden="true">→</span></button>
+            <p class="form-note">Your email application will open with your enquiry ready to send.</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-details" aria-label="Additional contact information">
+            <div class="details-intro">
+              <h2>Other ways to <span>reach us.</span></h2>
+              <p>Prefer to contact us directly? Use the details below.</p>
+            </div>
+            <div class="detail-item">
+              <a href="mailto:info@am2pm.co.za">info@am2pm.co.za</a>
+            </div>
+            <div class="detail-item">
+              <p>Johannesburg, Gauteng<br />South Africa</p>
+            </div>
+            <div class="details-bottom">
+              <span>AM2PM Consulting</span>
+              <p>Engineering. Transformation. Operational support.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("#contact-form");
+  const status = document.querySelector<HTMLElement>("#form-status");
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const data = new FormData(form);
+    const name = String(data.get("name") ?? "");
+    const company = String(data.get("company") ?? "");
+    const email = String(data.get("email") ?? "");
+    const phone = String(data.get("phone") ?? "");
+    const service = String(data.get("service") ?? "Not specified");
+    const message = String(data.get("message") ?? "");
+
+    const subject = encodeURIComponent(`AM2PM enquiry — ${service}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\nService area: ${service}\n\nEnquiry:\n${message}`
+    );
+
+    if (status) status.textContent = "Opening your email application…";
+    window.location.href = `mailto:info@am2pm.co.za?subject=${subject}&body=${body}`;
+  });
+</script>
+
+<style>
+  .contact-page {
+    --contact-ink: #303238;
+    --contact-blue: #4091bf;
+    --contact-muted: #687482;
+    --contact-line: #dce3e9;
+    color: var(--contact-ink);
+    background: #f5f8fb;
+    font-family: "Open Sans", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .contact-page *,
+  .contact-page *::before,
+  .contact-page *::after { box-sizing: border-box; }
+
+  .contact-page .container { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+  .contact-section { padding: clamp(64px, 8vw, 104px) 0; }
+  .contact-heading { max-width: 720px; margin-bottom: 42px; }
+  .contact-heading h1,
+  .details-intro h2 {
+    margin: 0;
+    font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+    font-weight: 800;
+    letter-spacing: -.065em;
+    line-height: .98;
+  }
+  .contact-heading h1 span,
+  .details-intro h2 span { color: var(--contact-blue); }
+  .contact-heading > p { max-width: 620px; margin: 20px 0 0; color: var(--contact-muted); font-size: 1.02rem; line-height: 1.75; }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(260px, .75fr);
+    align-items: stretch;
+    gap: 24px;
+  }
+  .contact-form {
+    padding: clamp(26px, 4vw, 44px);
+    background: #fff;
+    border: 1px solid rgba(48, 50, 56, .07);
+    border-radius: 24px;
+    box-shadow: 0 18px 55px rgba(30, 55, 75, .06);
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 18px; }
+  .contact-form label { display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+  .contact-form label > span { color: var(--contact-ink); font-size: .88rem; font-weight: 700; }
+  .contact-form label i { color: var(--contact-blue); font-style: normal; }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 16px;
+    border: 1px solid var(--contact-line);
+    border-radius: 13px;
+    outline: none;
+    background: #f8fafc;
+    color: var(--contact-ink);
+    font: inherit;
+    font-size: .92rem;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .contact-form textarea { min-height: 150px; resize: vertical; }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { color: #8b96a2; }
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    border-color: var(--contact-blue);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(64, 145, 191, .12);
+  }
+  .full-width { grid-column: 1 / -1; }
+  .submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    min-height: 54px;
+    margin-top: 26px;
+    padding: 0 25px;
+    border: 0;
+    border-radius: 13px;
+    background: var(--contact-ink);
+    color: #fff;
+    font: inherit;
+    font-size: .92rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .submit-button:hover { transform: translateY(-2px); background: var(--contact-blue); }
+  .submit-button span { font-size: 1.2rem; }
+  .form-note,
+  .form-status { margin: 13px 0 0; color: #7a8591; font-size: .78rem; line-height: 1.5; }
+  .form-status:empty { display: none; }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: clamp(28px, 3.5vw, 40px);
+    border-radius: 24px;
+    background: #303238;
+    color: #fff;
+  }
+  .details-intro h2 { font-size: clamp(2rem, 3.2vw, 2.8rem); }
+  .details-intro h2 span { display: block; margin-top: 5px; }
+  .details-intro > p { margin: 16px 0 0; color: rgba(255,255,255,.74); font-size: .92rem; line-height: 1.7; }
+  .detail-item { padding: 26px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+  .detail-item a,
+  .detail-item p { margin: 0; color: #fff; font-size: 1rem; line-height: 1.7; overflow-wrap: anywhere; }
+  .detail-item a:hover { color: #8fc4e2; }
+  .details-bottom { margin-top: auto; padding-top: 34px; }
+  .details-bottom > span { color: #fff; font-size: .92rem; font-weight: 800; }
+  .details-bottom p { margin: 8px 0 0; color: rgba(255,255,255,.68); font-size: .8rem; line-height: 1.6; }
+
+  @media (max-width: 760px) {
+    .contact-page .container { width: calc(100% - 36px); }
+    .contact-layout { grid-template-columns: 1fr; }
+    .contact-heading { margin-bottom: 32px; }
+    .contact-details { min-height: 0; }
+    .details-bottom { margin-top: 20px; }
+  }
+  @media (max-width: 520px) {
+    .contact-page .container { width: calc(100% - 32px); }
+    .form-grid { grid-template-columns: 1fr; gap: 18px; }
+    .full-width { grid-column: auto; }
+    .contact-form { padding: 24px 20px; border-radius: 20px; }
+    .contact-details { border-radius: 20px; }
+    .submit-button { width: 100%; }
+  }
+</style>
